@@ -1,0 +1,182 @@
+actions:
+- action_hello_world
+- action_get_news
+- action_restaurant
+- action_weather
+- utter_ack_dosearch
+- utter_ack_findalternatives
+- utter_ack_makereservation
+- utter_ask_cuisine
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_moreupdates
+- utter_ask_numpeople
+- utter_ask_price
+- utter_cheer_up
+- utter_did_that_help
+- utter_fine_answer
+- utter_global_answer
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_like_weather
+- utter_on_it
+- utter_weather_debate
+- utter_weather_forecast
+- utter_weather_influence
+- action_access_location
+- respond_chitchat
+- utter_ask_continue
+
+entities:
+- favourite_weath
+- global
+- hotel_info
+- location
+- weather_debate
+- weather_inform
+- word_hello
+- world_hello
+- place
+- topic_news
+
+
+intents:
+- noo
+- getNews
+- chitchat
+- inform_location
+- greet
+- ask_fine
+- weather_information
+- bot_world
+- inform_restaurant
+- GlobalWarming
+- affirm_restaurant
+- goodbye
+- affirm
+- deny
+- deny_restaurant
+- mood_great
+- mood_unhappy
+- bot_challenge
+- request_info
+- thankyou
+- favourite_weather
+- weather_emotions
+- weather_discusstion
+- weather_forecast
+responses:
+  utter_ack_dosearch:
+  - text: ok let me see what I can find
+  utter_ack_findalternatives:
+  - text: ok let me see what else there is
+  utter_ack_makereservation:
+  - buttons:
+    - payload: thank you
+      title: thank you
+    text: ok making a reservation for restaurant (price={price} cuisine={cuisine})
+      in location={location} for count={people}?
+  utter_ask_cuisine:
+  - text: what kind of cuisine would you like?
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: where?
+  utter_ask_moreupdates:
+  - text: if you'd like to modify anything else, please tell me what.
+  utter_ask_numpeople:
+  - text: for how many people?
+  utter_ask_price:
+  - buttons:
+    - payload: cheap
+      title: cheap
+    - payload: expensive
+      title: expensive
+    text: in which price range?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_fine_answer:
+  - text: I'm good, yourself?
+  utter_global_answer:
+  - text: Global warming is the temperature of Earth's surface, oceans and atmosphere
+      going up over tens of years. ... The most noticeable changes because of this
+      increase in temperature is the melting of ice caps all around the world. Sea
+      level is rising steadily because of continental ice melting into the sea.
+  - text: The greenhouse effect is the process by which radiation from a planet's
+      atmosphere warms the planet's surface to a temperature above what it would be
+      without this atmosphere.
+  - text: Global warming occurs when carbon dioxide (CO2) and other air pollutants
+      and greenhouse gases collect in the atmosphere and absorb sunlight and solar
+      radiation that have bounced off the earth’s surface.
+  - text: Global warming are being felt across the globe. Extreme heat waves have
+      caused tens of thousands of deaths around the world in recent years.
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Hi...My friend
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a Audiobot .
+  utter_like_weather:
+  - text: Well, the weather is an important part of nature as well as, everyone likes
+      and dislikes the weather according to their choice and needs but, I always prefer
+      to hot weather because that time I enjoy a lot as well, I also go outside with
+      friends and family.
+  - text: My favorite season is spring It is a time when trees grow new leaves and
+      flowers of nature. There is greenery all around. Due to global warming summers
+      are very hot in Pakistan and it is very difficult for the people to bear the
+      second heat of the Sun.
+  utter_on_it:
+  - text: I'm on it
+  utter_weather_debate:
+  - text: Yes you can debate on weather. This is a discussable topic.
+  - text: Weather is good for small talk.You can talk about 1) climate 2) weather
+      seasons 3)Weather Fruits 4)Weather Forecasting etc
+  utter_weather_forecast:
+  - text: A seven-day forecast can accurately predict the weather about 80 percent
+      of the time and a five-day forecast can accurately predict the weather approximately
+      90 percent of the time. ... Meteorologists use computer programs called weather
+      models to make forecasts.
+  - text: Meteorologists can give a pretty decent idea of what the weather will be
+      like about a week in advance but as far as really accurate, they get accurate
+      about 24-48 hours out.
+  utter_weather_influence:
+  - text: If you're in a good mood, chances are, bad weather won't bring you down
+      too much. But if you're feeling crummy already, a cold, dreary day could easily
+      make your mood go from bad to worse.
+  - text: every time you go out and take photos of clouds that strike you as interesting,
+      make conscious note of your local weather patterns, or go take special interest
+      in the local or regional weather events, yo are essentially engaging in weather
+      as a hobby.
+
+  utter_ask_continue:
+  - text: Do you want to continue?
+  - text: Do you want any thing else
+  - text: Tell me if you want some thing else.
+  - text: I am at your service if you need any thing   
+
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  hotel_info:
+    type: text
+  location:
+    type: text
+  matches:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  weather_inform:
+    type: text
+  place:
+    type: text  
+  topic_news:
+    type: text  
